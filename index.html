@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seeky — The OS Intelligence Layer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top-notice">
+        <span>Seeky is now 100% Free & Open — <a href="https://ko-fi.com/seeky" target="_blank"
+                style="color: inherit; font-weight: 700;">Support our work on Ko-fi ⚡</a></span>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 8px; color: var(--secondary);">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z"></path>
+                    <path d="M2 17L12 22L22 17"></path>
+                    <path d="M2 12L12 17L22 12"></path>
+                </svg>
+                Seeky
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="javascript:void(0)" class="privacy-trigger">Privacy</a>
+                <a href="#download">Download</a>
+            </div>
+            <a href="#download" class="btn-primary">Download App</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-tag">Private. Local. Free Forever.</p>
+            <h1 class="hero-title">
+                Your intelligence,<br>
+                <span class="italic-serif">locally unified.</span>
+            </h1>
+            <p class="hero-subtitle">
+                The private-first neural search engine for your desktop. No subscriptions, no cloud, no compromise.
+                Recall your prompts and documents instantly for free.
+            </p>
+            <div class="hero-actions">
+                <a href="#download" class="btn-primary">Get Seeky for Windows</a>
+                <a href="https://ko-fi.com/seeky" class="btn-outline" target="_blank">Support on Ko-fi</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <img src="assets/hero_1_enhanced.png" alt="Seeky Interface">
+        </div>
+    </header>
+
+    <div class="ribbon">
+        <div class="ribbon-content">
+            <span>PRIVATE DIRECTORY</span> <span>ZERO LATENCY</span> <span>ON-DEVICE AI</span> <span>LOCAL SEARCH</span>
+            <span>ENCRYPTED VECTORS</span> <span>SEMANTIC RECALL</span>
+            <span>PRIVATE DIRECTORY</span> <span>ZERO LATENCY</span> <span>ON-DEVICE AI</span> <span>LOCAL SEARCH</span>
+            <span>ENCRYPTED VECTORS</span> <span>SEMANTIC RECALL</span>
+        </div>
+    </div>
+
+    <section id="features" class="features">
+        <span class="section-label">Capabilities</span>
+        <h2 class="section-title">Built for the <span class="italic-serif">privacy-conscious.</span></h2>
+
+        <div class="bento-container">
+            <div class="bento-item large image-card" style="background-image: url('assets/hero_2_orig.png');">
+                <div class="image-card-content">
+                    <div class="bento-icon" style="background: rgba(255,255,255,0.2); color: #fff;">⚡</div>
+                    <h3>OS-Wide Intelligence</h3>
+                    <p>Hit <kbd>Win+Alt+P</kbd> and summon your knowledge graph inside any app. Search and inject your
+                        prompt directly into your active window with zero friction.</p>
+                </div>
+            </div>
+            <div class="bento-item">
+                <div class="bento-icon">🔒</div>
+                <div>
+                    <h3>100% Offline</h3>
+                    <p>Every embedding, search, and parse happens on-device. No APIs, no cloud, no telemetry. Just your
+                        data, indexed by you.</p>
+                </div>
+            </div>
+            <div class="bento-item">
+                <div class="bento-icon">🧠</div>
+                <div>
+                    <h3>Neural Intelligence</h3>
+                    <p>Seeky understands the context of your data, searching by meaning rather than just matching
+                        characters. High-performance semantic recall right on your CPU.</p>
+                </div>
+            </div>
+            <div class="bento-item large">
+                <div class="bento-icon">👁️</div>
+                <div>
+                    <h3>Local OCR Intelligence</h3>
+                    <p>Index your screenshots and images. Seeky extracts text locally, making every PDF, image, and
+                        snippet in your directory searchable instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="download" class="footer">
+        <div class="footer-container">
+            <h2 class="footer-title">Elevate your <span class="italic-serif">workflow.</span></h2>
+            <a href="#" class="btn-primary" style="padding: 20px 48px; font-size: 18px;">Download Seeky for Windows</a>
+
+            <p style="margin-top: 60px; font-size: 12px; color: var(--text-muted);">© 2026 Seeky. Built for a private
+                future.</p>
+        </div>
+    </footer>
+
+    <!-- Privacy Modal -->
+    <div class="modal-overlay" id="privacyModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="privacy-body">
+                <h1 style="font-size: 40px; margin-bottom: 8px;">Privacy Policy</h1>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 40px;">Last Updated: March 20, 2026
+                </p>
+
+                <h2>100% Local Intelligence</h2>
+                <p>Seeky is built on the principle of absolute data sovereignty. Your data belongs to you and never
+                    leaves your machine.</p>
+
+                <h2>1. Information Collected</h2>
+                <p>Seeky <strong>does not</strong> collect, store, or transmit any personally identifiable information
+                    (PII) to the developer or any third-party servers.</p>
+                <ul>
+                    <li><strong>Local Metadata:</strong> Your filenames and content stay on your local hardware.</li>
+                    <li><strong>No Cloud Sync:</strong> There is no cloud component to Seeky.</li>
+                </ul>
+
+                <h2>2. No Cloud Transmission</h2>
+                <p>Seeky does not integrate with external AI cloud providers. All operations are processed entirely on
+                    your local CPU/GPU using local resources only.</p>
+
+                <h2>3. Security & Permissions</h2>
+                <p>Seeky only accesses folders you explicitly choose to link. Network access is restricted to
+                    application updates only—no user content is ever transmitted.</p>
+
+                <div
+                    style="margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--border); text-align: center;">
+                    <button class="btn-primary" id="gotItBtn" style="padding: 12px 32px;">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
