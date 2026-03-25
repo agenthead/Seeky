@@ -1,24 +1,24 @@
 :root {
-    --bg-primary: #f8fafc;    /* Very soft slate-white */
-    --text-heading: #0f172a;  /* Deep slate blue */
-    --text-body: #334155;     /* Slate grey */
-    --text-muted: #64748b;
+    --bg-primary: #fcfcf9;    /* Warm, premium paper-like white */
+    --text-heading: #000000;  /* Pure black for high-end feel */
+    --text-body: #1d1d1f;     /* Apple-style off-black */
+    --text-muted: #86868b;
     
-    --accent: #4f46e5;        /* Vibrant Indigo */
-    --accent-dark: #3730a3;
+    --accent: #000000;        /* Move to high-fashion monochrome */
+    --accent-dark: #333333;
     --accent-contrast: #ffffff;
     
-    --secondary: #0f766e;     /* Teal for secondary highlights */
+    --secondary: #059669;     /* Deep, modern emerald-teal */
     
     --surface: #ffffff;
-    --surface-glass: rgba(255, 255, 255, 0.85);
-    --border: rgba(15, 23, 42, 0.08); /* More defined border */
-    --shadow-soft: 0 10px 40px rgba(15, 23, 42, 0.05); /* Blue-tinted shadow */
-    --shadow-floating: 0 30px 60px rgba(15, 23, 42, 0.12);
+    --surface-glass: rgba(255, 255, 255, 0.7);
+    --border: rgba(0, 0, 0, 0.04); 
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.03); 
+    --shadow-floating: 0 40px 80px rgba(0, 0, 0, 0.08);
 
-    --radius-full: 100px;
-    --radius-lg: 24px;         /* Slightly sharper than Wisprflow's massive rounds */
-    --radius-md: 14px;
+    --radius-full: 999px;
+    --radius-lg: 32px;         /* Larger, softer corners */
+    --radius-md: 20px;
 }
 
 * {
@@ -63,12 +63,12 @@ h1, h2, h3 {
 .navbar {
     display: flex;
     justify-content: center;
-    padding: 24px 40px;
+    padding: 16px 24px;
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(252, 252, 245, 0.8);
-    backdrop-filter: blur(20px);
+    background: rgba(252, 252, 249, 0.6);
+    backdrop-filter: blur(24px) saturate(180%);
     border-bottom: 1px solid var(--border);
 }
 
@@ -121,21 +121,19 @@ h1, h2, h3 {
 .btn-primary {
     background-color: var(--accent);
     color: var(--accent-contrast);
-    padding: 12px 28px;
+    padding: 14px 32px;
     border-radius: var(--radius-full);
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-flex;
     align-items: center;
     border: none;
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15);
 }
 
 .btn-primary:hover {
     background-color: var(--accent-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.25);
+    transform: scale(1.02);
 }
 
 .btn-outline {
@@ -159,12 +157,12 @@ h1, h2, h3 {
 /* Hero Section Redesigned for Layering */
 .hero {
     position: relative;
-    padding: 140px 40px;
+    padding: 100px 40px;
     max-width: 1400px;
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
-    min-height: 95vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -291,7 +289,7 @@ h1, h2, h3 {
 
 /* Bento Grid */
 .features {
-    padding: 160px 40px;
+    padding: 100px 40px;
     max-width: 1300px;
     margin: 0 auto;
 }
@@ -310,7 +308,7 @@ h1, h2, h3 {
 .section-title {
     font-size: 56px;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .bento-container {
@@ -328,12 +326,13 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s ease;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .bento-item:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-soft);
+    transform: scale(1.01);
+    border-color: rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-floating);
 }
 
 .bento-item.large {
@@ -392,7 +391,7 @@ h1, h2, h3 {
 
 /* Footer */
 .footer {
-    padding: 160px 40px 80px;
+    padding: 100px 40px 60px;
     background: #fff;
     border-top: 1px solid var(--border);
 }
@@ -429,7 +428,7 @@ h1, h2, h3 {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    margin: 100px 0;
+    margin: 60px 0;
 }
 
 .ribbon-content {
@@ -520,4 +519,97 @@ h1, h2, h3 {
 
 .privacy-body li {
     margin-bottom: 8px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 40px;
+    background: var(--bg-primary); /* Keeps it seamless with features */
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-soft);
+    border-color: rgba(15, 23, 42, 0.15); /* Slightly darker border on hover */
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-heading);
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: var(--accent);
+}
+
+.faq-icon {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--text-muted);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    color: var(--accent);
+}
+
+.faq-answer {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+    padding: 0 24px;
+    color: var(--text-body);
+}
+
+.faq-answer p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.faq-answer kbd {
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 400px;
+    opacity: 1;
+    padding: 0 24px 24px;
 }
