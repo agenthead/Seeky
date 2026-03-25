@@ -90,4 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === modal) closeModal();
         });
     }
+
+    // Capture Download Analytics
+    document.querySelectorAll('a[href$=".exe"]').forEach(downloadLink => {
+        downloadLink.addEventListener('click', () => {
+            if (typeof gtag === 'function') {
+                gtag('event', 'download', {
+                    'file_name': downloadLink.href.split('/').pop(),
+                    'link_url': downloadLink.href
+                });
+            }
+        });
+    });
 });
